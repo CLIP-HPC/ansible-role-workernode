@@ -28,6 +28,22 @@ Dependencies
 
 ## Example Playbook
 
+    - hosts: all
+      roles:
+        - role: geerlingguy.repo-epel
+        - role: hephyvienna.grid
+          vars:
+            grid_vos:
+              - cms
+              - alice
+              - belle
+            grid_umd_repo_exclude:
+              - dpm-*
+              - lfc-*
+              - lcgdm-*
+        - role: hephyvienna.grid-worker
+
+
 ## License
 
 MIT

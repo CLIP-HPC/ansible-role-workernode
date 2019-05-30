@@ -14,5 +14,9 @@ provisioner:
     name: ansible-lint
 verifier:
   name: testinfra
+  options:
+    # FIXME: another workaround for python issue of molecule
+    W: ignore::DeprecationWarning
+    junit-xml: ../../default_junit.xml
   lint:
     name: flake8
