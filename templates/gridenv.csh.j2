@@ -1,0 +1,18 @@
+{{ ansible_managed | comment }}
+
+setenv LCG_LOCATION /usr
+setenv GLITE_LOCATION /usr
+setenv GLITE_LOCATION_VAR /var
+setenv SRM_PATH /usr/share/srm
+
+setenv JAVA_HOME {{ grid_worker_java_home }}
+
+setenv MYPROXY_SERVER {{ grid_worker_myproxy_server }}
+setenv LCG_GFAL_INFOSYS {{ grid_worker_lcg_gfal_infosys }}
+setenv BDII_LIST {{ grid_worker_bdii_list }}
+
+setenv GT_PROXY_MODE rfc
+
+{% for key, value in grid_worker_env_vars.items() %}
+setenv {{ key }} {{ value }}
+{% endfor %}

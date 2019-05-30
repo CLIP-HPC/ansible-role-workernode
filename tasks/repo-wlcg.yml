@@ -1,0 +1,20 @@
+---
+- name: Install WLCG repository
+  yum_repository:
+    name: wlcg
+    description: WLCG repoitory
+    baseurl: "{{ grid_worker_repo_wlcg_url }}"
+    enabled: "{{ grid_worker_repo_wlcg_enabled }}"
+    gpgcheck: true
+    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-wlcg
+    priority: "{{ grid_worker_repo_wlcg_priority }}"
+
+- name: Copy WLCG gpgkey
+  copy:
+    src: RPM-GPG-KEY-wlcg
+    dest: /etc/pki/rpm-gpg/RPM-GPG-KEY-wlcg
+
+- name: Import WLCG gpgkey
+  rpm_key:
+    state: present
+    key: /etc/pki/rpm-gpg/RPM-GPG-KEY-wlcg

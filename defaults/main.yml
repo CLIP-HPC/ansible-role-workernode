@@ -1,0 +1,12 @@
+---
+# defaults file for hephyvienna.grid-worker
+grid_worker_ui: false
+grid_worker_enable_repo_wlcg: true
+grid_worker_install_hepos: true
+grid_worker_repo_wlcg_enabled: true
+grid_worker_repo_wlcg_priority: 10
+grid_worker_myproxy_server: myproxy.cern.ch
+grid_worker_lcg_gfal_infosys: lcg-bdii.cern.ch:2170
+grid_worker_bdii_list: lcg-bdii.cern.ch:2170
+
+grid_worker_env_vars: {}

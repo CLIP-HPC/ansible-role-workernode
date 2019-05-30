@@ -1,0 +1,11 @@
+---
+# os specific vars file for hephy.repo-wlcg
+grid_worker_repo_wlcg_url: http://linuxsoft.cern.ch/wlcg/centos7/$basearch
+grid_worker_hepos_pkgs:
+  - HEP_OSlibs
+grid_client_java_home: /usr/lib/jvm/java-1.8.0-openjdk
+
+grid_client_ui_pkgs:
+  - ui
+grid_client_wn_pkgs:
+  - wn
