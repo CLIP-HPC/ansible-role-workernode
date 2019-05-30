@@ -1,14 +1,48 @@
 import os
 
 import testinfra.utils.ansible_runner
+import pytest
 
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_hosts_file(host):
-    f = host.file('/etc/hosts')
+def test_packages_wn(host):
 
-    assert f.exists
-    assert f.user == 'root'
-    assert f.group == 'root'
+    rel = host.system_info.release
+    assert rel[:2] in [ '6.', '7.' ]
+
+    if rel.startswith('7'):
+        name = 'wn'
+        vers = '4.0'
+    else:
+        name = 'emi-wn'
+        vers = '3.1'
+
+    pkg = host.package(name)
+    assert pkg.is_installed
+    assert pkg.version.startswith(vers)
+
+def test_packages_hepos_lib(host):
+
+    rel = host.system_info.release
+    assert rel[:2] in [ '6.', '7.' ]
+
+    if rel.startswith('7'):
+        name = 'HEPOS_libs'
+        vers = '7.2'
+    else:
+        name = 'HEP_OSlibs_SL6'
+        vers = '3.1'
+
+    pkg = host.package(name)
+    assert pkg.is_installed
+    assert pkg.version.startswith(vers)
+
+
+@pytest.mark.parametrize('name', [
+    ('/etc/profile.d/gridenv.sh'),
+])
+def test_files(host, name):
+    pkg = host.file(name)
+    assert pkg.exists
