@@ -9,11 +9,11 @@
     state: present
 
 - name: Install WLCG repo
-  include_taks: repo-wlcg.yml
+  include_tasks: repo-wlcg.yml
   when: grid_worker_enable_repo_wlcg
 
 - name: Install HEP_OSlibs
-  packages:
+  package:
     name: "{{ grid_worker_hepos_pkgs }}"
     state: present
 

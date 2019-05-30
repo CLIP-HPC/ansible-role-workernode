@@ -2,4 +2,11 @@
 - name: Converge
   hosts: all
   roles:
+    - role: geerlingguy.repo-epel
+    - role: hephyvienna.grid
+      vars:
+        grid_vos:
+          - cms
+          - alice
+          - belle
     - role: hephyvienna.grid-worker
