@@ -26,3 +26,15 @@
   template:
     src: gridenv.csh.j2
     dest: /etc/profile.d/gridenv.csh
+
+- block: Install HTCondor CE client
+
+  - name: Install Condor repo
+    include_tasks: repo-condor.yml
+
+  - name: Install HTCondor CE Client
+    package:
+      name: htcondor-ce-client
+      state: present
+
+  when: grid_worker_install_htc_ce_client

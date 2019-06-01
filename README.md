@@ -20,11 +20,13 @@ Available variables are listed below, along with default values (see `defaults/m
 
 Request installation of user interface
 
-Dependencies
-------------
+    grid_worker_install_htc_ce_client: false
 
-* hephyvienna.grid
-* hephyvienna.cvmfs
+Install HTCondor CE client
+
+## Dependencies
+
+*   hephyvienna.grid
 
 ## Example Playbook
 
