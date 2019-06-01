@@ -30,12 +30,12 @@
 - name: Install HTCondor CE client
   block:
 
-  - name: Install HTCondor repo
-    include_tasks: repo-htcondor.yml
+    - name: Install HTCondor repo
+      include_tasks: repo-htcondor.yml
 
-  - name: Install HTCondor CE Client packages
-    package:
-      name: htcondor-ce-client
-      state: present
+    - name: Install HTCondor CE Client packages
+      package:
+        name: htcondor-ce-client
+        state: present
 
   when: grid_worker_install_htc_ce_client
