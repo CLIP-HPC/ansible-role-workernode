@@ -1,0 +1,18 @@
+---
+- name: Install stable repository
+  yum_repository:
+    name: htcondor-stable
+    description: "HTCondor Stable RPM Repository for Redhat Enterprise Linux {{ ansible_distribution_major_version }}"
+    baseurl: "https://research.cs.wisc.edu/htcondor/yum/stable/8.8/rhel{{ ansible_distribution_major_version }}"
+    enabled: true
+    gpgcheck: true
+    gpgkey: http://research.cs.wisc.edu/htcondor/yum/RPM-GPG-KEY-HTCondor
+
+- name: Install development repository
+  yum_repository:
+    name: htcondor-development
+    description: "HTCondor Development RPM Repository for Redhat Enterprise Linux {{ ansible_distribution_major_version }}"
+    baseurl: "https://research.cs.wisc.edu/htcondor/yum/development/rhel{{ ansible_distribution_major_version }}"
+    enabled: "{{ grid_worker_htcondor_dev_repo_enable }}"
+    gpgcheck: true
+    gpgkey: http://research.cs.wisc.edu/htcondor/yum/RPM-GPG-KEY-HTCondor

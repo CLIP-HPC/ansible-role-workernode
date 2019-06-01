@@ -30,7 +30,7 @@
 - block: Install HTCondor CE client
 
   - name: Install Condor repo
-    include_tasks: repo-condor.yml
+    include_tasks: repo-htcondor.yml
 
   - name: Install HTCondor CE Client
     package:
