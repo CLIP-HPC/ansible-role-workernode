@@ -1,4 +1,4 @@
 ---
 - src: geerlingguy.repo-epel
-- src: git+https://gitlab.cern.ch/hephyvienna/ansible/role-grid.git
-  name: hephyvienna.grid
+- src: hephyvienna.grid
+  version: master

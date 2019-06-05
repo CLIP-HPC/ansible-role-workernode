@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: grid-worker
+  role_name: grid_worker
   author: Dietrich Liko
   description: Configure an EGI/WLCG worker node or user interface
   company: Institite for High Energy Physics, Austrian Academy of Sciencs
