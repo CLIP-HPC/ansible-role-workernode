@@ -1,8 +1,5 @@
-# grid-worker
+# grid-worker [![Build Status](https://travis-ci.org/hephyvienna/ansible-role-grid-worker.svg?branch=master)](https://travis-ci.org/hephyvienna/ansible-role-grid-worker) ![Ansible Role](https://img.shields.io/ansible/role/40977.svg)
 
-[![pipeline status](https://gitlab.cern.ch/hephyvienna/ansible/role-grid-worker/badges/master/pipeline.svg)](https://gitlab.cern.ch/hephyvienna/ansible/role-grid-worker/commits/master)
-<!-- TODO Add badge -->
-<!-- [![galaxy](https://img.shields.io/badge/galaxy-dietrichliko.grid-worker-40775.svg?logo=galaxy)](https://galaxy.ansible.com/dietrichliko/grid-worker) -->
 
 Ansible role for installation of WLCG/EGI woker node or user interface
 
