@@ -4,7 +4,7 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: grid_worker
+    - ROLE_NAME: grid-worker
   matrix:
     - MOLECULE_DISTRO: centos:7
     - MOLECULE_DISTRO: centos:6
@@ -27,6 +27,6 @@ script:
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
-  slack:
-    on_success: change # default: always
-    on_failure: always # default: always
+  # slack:
+  #   on_success: change # default: always
+  #   on_failure: always # default: always
