@@ -1,7 +1,7 @@
-# workernode [![Build Status](https://travis-ci.com/hephyvienna/ansible-role-workernode.svg?branch=master)](https://travis-ci.com/hephyvienna/ansible-role-workernode) [![Ansible Role](https://img.shields.io/ansible/role/xxxx.svg)](https://galaxy.ansible.com/hephyvienna/workernode)
+# workernode [![Build Status](https://travis-ci.com/hephyvienna/ansible-role-workernode.svg?branch=master)](https://travis-ci.com/hephyvienna/ansible-role-workernode) [![Ansible Role](https://img.shields.io/ansible/role/41059.svg)](https://galaxy.ansible.com/hephyvienna/workernode)
 
 
-Ansible role for installation of WLCG/EGI woker node or user interface
+Ansible role for installation of WLCG/EGI worker node or user interface
 
 
 # Requirements
