@@ -3,11 +3,11 @@
   yum_repository:
     name: wlcg
     description: WLCG repoitory
-    baseurl: "{{ grid_worker_repo_wlcg_url }}"
-    enabled: "{{ grid_worker_repo_wlcg_enabled }}"
+    baseurl: "{{ workernode_repo_wlcg_url }}"
+    enabled: "{{ workernode_repo_wlcg_enabled }}"
     gpgcheck: true
     gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-wlcg
-    priority: "{{ grid_worker_repo_wlcg_priority }}"
+    priority: "{{ workernode_repo_wlcg_priority }}"
 
 - name: Copy WLCG gpgkey
   copy:

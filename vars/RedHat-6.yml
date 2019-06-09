@@ -1,11 +1,11 @@
 ---
 # os specific vars file for hephy.repo-wlcg
-grid_worker_repo_wlcg_url: http://linuxsoft.cern.ch/wlcg/sl6/$basearch
-grid_worker_hepos_pkgs:
+workernode_repo_wlcg_url: http://linuxsoft.cern.ch/wlcg/sl6/$basearch
+workernode_hepos_pkgs:
   - HEP_OSlibs_SL6
-grid_worker_java_home: /usr/lib/jvm/java-1.8.0-openjdk.x86_64
+workernode_java_home: /usr/lib/jvm/java-1.8.0-openjdk.x86_64
 
-grid_worker_ui_pkgs:
+workernode_ui_pkgs:
   - emi-ui
-grid_worker_wn_pkgs:
+workernode_wn_pkgs:
   - emi-wn

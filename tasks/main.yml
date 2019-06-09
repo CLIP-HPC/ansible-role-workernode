@@ -1,20 +1,20 @@
 ---
-# tasks file for hephyvienna.grid-worker
+# tasks file for hephyvienna.workernode
 - name: Include OS specific variables
   include_vars: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
 
 - name: Install packages
   package:
-    name: "{{ grid_worker_ui_pkgs if grid_worker_ui else grid_worker_wn_pkgs }}"
+    name: "{{ workernode_ui_pkgs if workernode_ui else workernode_wn_pkgs }}"
     state: present
 
 - name: Install WLCG repo
   include_tasks: repo-wlcg.yml
-  when: grid_worker_enable_repo_wlcg
+  when: workernode_enable_repo_wlcg
 
 - name: Install HEP_OSlibs
   package:
-    name: "{{ grid_worker_hepos_pkgs }}"
+    name: "{{ workernode_hepos_pkgs }}"
     state: present
 
 - name: Configure grid wn/ui for bash
@@ -38,4 +38,4 @@
         name: htcondor-ce-client
         state: present
 
-  when: grid_worker_install_htc_ce_client
+  when: workernode_install_htc_ce_client

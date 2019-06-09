@@ -1,10 +1,10 @@
 ---
 galaxy_info:
-  role_name: grid_worker
+  role_name: workernode
   author: Dietrich Liko
   description: Configure an EGI/WLCG worker node or user interface
   company: Institite for High Energy Physics, Austrian Academy of Sciencs
-  issue_tracker_url: https://gitlab.cern.ch/hephyvienna/ansible/role-grid-worker/issues
+  issue_tracker_url: https://gitlab.cern.ch/hephyvienna/ansible/role-workernode/issues
   license: MIT
   min_ansible_version: 2.7
   platforms:

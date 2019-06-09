@@ -1,4 +1,4 @@
-# grid-worker [![Build Status](https://travis-ci.com/hephyvienna/ansible-role-grid-worker.svg?branch=master)](https://travis-ci.com/hephyvienna/ansible-role-grid-worker) ![Ansible Role](https://img.shields.io/ansible/role/40977.svg)
+# workernode [![Build Status](https://travis-ci.com/hephyvienna/ansible-role-workernode.svg?branch=master)](https://travis-ci.com/hephyvienna/ansible-role-workernode) [![Ansible Role](https://img.shields.io/ansible/role/xxxx.svg)](https://galaxy.ansible.com/hephyvienna/workernode)
 
 
 Ansible role for installation of WLCG/EGI woker node or user interface
@@ -13,11 +13,11 @@ Ansible role for installation of WLCG/EGI woker node or user interface
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    grid_worker_ui: false
+    workernode_ui: false
 
 Request installation of user interface
 
-    grid_worker_install_htc_ce_client: false
+    workernode_install_htc_ce_client: false
 
 Install HTCondor CE client
 
@@ -40,7 +40,7 @@ Install HTCondor CE client
               - dpm-*
               - lfc-*
               - lcgdm-*
-        - role: hephyvienna.grid-worker
+        - role: hephyvienna.workernode
 
 
 ## License

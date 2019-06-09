@@ -13,4 +13,4 @@
           - dpm-*
           - lfc-*
           - lcgdm-*
-    - role: hephyvienna.grid-worker
+    - role: hephyvienna.workernode
