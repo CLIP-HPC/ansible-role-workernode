@@ -1,8 +1,13 @@
 ---
 - name: Converge
   hosts: all
+  pre_tasks:
+    - name: Enable EPEL
+      package:
+        name: epel-release
+        state: present
+        
   roles:
-    - role: geerlingguy.repo-epel
     - role: hephyvienna.grid
       vars:
         grid_vos:
