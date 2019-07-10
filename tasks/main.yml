@@ -17,15 +17,13 @@
     name: "{{ workernode_hepos_pkgs }}"
     state: present
 
-- name: Configure grid wn/ui for bash
+- name: Configure grid wn/ui
   template:
-    src: gridenv.sh.j2
-    dest: /etc/profile.d/gridenv.sh
-
-- name: Configure grid wn/ui for csh
-  template:
-    src: gridenv.csh.j2
-    dest: /etc/profile.d/gridenv.csh
+    src: "gridenv.{{ item }}.j2"
+    dest: "/etc/profile.d/gridenv.{{ item }}"
+  loop:
+    - sh
+    - csh
 
 - name: Install HTCondor CE client
   block:
